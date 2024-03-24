@@ -9,6 +9,6 @@ class CommentController extends Controller
 {
     public function index(){
         $comments = Comment::all();
-        return response()->json($comments);
+        return response()->json($comments, 200, [], JSON_PRETTY_PRINT);
     }
 }
